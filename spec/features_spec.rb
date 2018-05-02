@@ -1,8 +1,11 @@
-
-
 feature 'battle' do
-  scenario 'Can run app and check page content' do
-    visit('/')
-    expect(page).to have_content('Testing infrastructure working!')
-    end
+
+scenario 'Add player names' do
+  visit('/')
+  save_and_open_page
+  fill_in('Player_1', with: 'Asia')
+  fill_in('Player_2', with: 'Alastair')
+  click_button 'Submit'
+  expect(page).to have_content ('Asia Vs. Alastair')
   end
+end
