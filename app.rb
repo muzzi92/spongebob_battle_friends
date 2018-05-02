@@ -17,8 +17,10 @@ end
 get '/play' do
   @player_1 = session[:player_1]
   @player_2 = session[:player_2]
-erb(:play)
+  erb(:play)
 end
+
+
 
 run! if app_file == $0
 
