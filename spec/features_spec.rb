@@ -12,13 +12,13 @@ feature 'View hitpoints' do
   end
 
 feature 'Attack' do
-  scenario 'Attack player_2 & see confirmation' do
+  xscenario 'Attack oponent & see confirmation' do
     sign_in_and_play
     click_link 'Attack'
     expect(page).to have_content("Alastair has been hit")
     end
 
-  scenario 'Reduces player 2 HP by 10' do
+  xscenario 'Reduces player 2 HP by 10' do
     sign_in_and_play
     click_link 'Attack'
       expect(page).to have_content("Alastair: 90 HP")

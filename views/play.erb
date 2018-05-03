@@ -1,6 +1,26 @@
-<%= @p1_name %> Vs. <%= @p2_name %>
-<br>
-<br>
-<%= @p2_name %>: 100 HP
+<style>
+  h1, h2, h3 {
+    color:rgb(195, 0, 0);
+    text-align: center;
+  }
 
-<a href="/attack">Attack</a>
+  div {
+    background-image: url(https://media.giphy.com/media/6zGASZMuTXREA/giphy.gif);
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 400px
+  }
+
+</style>
+
+
+<h1> <%= @p1.name %> Vs. <%= @p2.name %> </h1>
+<br>
+<br>
+<h2> <%= @p2.name %>: <%= @p2.health %> HP </h2>
+
+<h3> <a href="/attack">Attack</a> </h3>
+
+<div>
+</div>

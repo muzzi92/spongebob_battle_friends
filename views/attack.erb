@@ -1,4 +1,24 @@
-Holy fuck, <%= @p2.name %> has been hit!
+<style>
+
+  div {
+    background-image: url(https://i.giphy.com/media/nBFRrsg55sJqM/200w.webp);
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 400px
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+</style>
+
+<div>
+</div>
+
+<h1>Holy fuck, <%= @p2.name %> has been hit! </h1>
 <br>
 <br>
-<%= @p2.name %>: <%= @p2.health %> HP
+<h2> <%= @p2.name %>: <%= @p2.health %> HP </h2>
+<br>
+<h3> <a href="/play">Next Move</a> </h3>
