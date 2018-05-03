@@ -24,4 +24,5 @@ feature 'Attack' do
       expect(page).to have_content("Alastair: 90 HP")
     end
   end
+
 end
