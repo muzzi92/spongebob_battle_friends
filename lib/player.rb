@@ -6,8 +6,12 @@ class Player
     @health = 100
   end
 
-def damage
-  @health -= 10
-end
+  def sustain_damage
+    @health -= 10
+  end
 
+  def attack(player)
+    player.sustain_damage
+  end
+  
 end
