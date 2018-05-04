@@ -1,8 +1,8 @@
 require 'game'
 
 describe Game do
-  let(:muzzi) { double :player1, name: 'muzzi' }
-  let(:alastair) { double :player2 }
+  let(:muzzi) { double :player1, name: 'muzzi', sustain_damage: nil }
+  let(:alastair) { double :player2, name: 'alastair', sustain_damage: nil }
   subject(:game) { described_class.new(muzzi, alastair) }
 
   describe '#player_one' do
@@ -11,18 +11,16 @@ describe Game do
     end
   end
 
-  describe '#player_two' do 
+  describe '#player_two' do
     it 'saves player two as an attribute' do
       expect(game.player_two).to eq(alastair)
     end
   end
 
   describe '#attack' do
-    let(:ralph) { double :player, sustain_damage: nil  }
-
     it 'calls sustain_damage on player' do
-      game.attack(ralph)
-      expect(ralph).to have_received(:sustain_damage)
+      game.attack
+      expect(alastair).to have_received(:sustain_damage)
     end
   end
 
