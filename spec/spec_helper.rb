@@ -8,6 +8,8 @@ require "./app.rb"
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'simplecov'
+SimpleCov.start
 
 Capybara.app = Battle
 
